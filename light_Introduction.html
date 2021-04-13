@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>燈種介紹</title>
+    <!-- 重置 -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- bootstrap 4.6.0 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- 動畫 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- 小圖示 -->
+    <script src="https://kit.fontawesome.com/271f30e909.js" crossorigin="anonymous"></script>
+    <!-- 文字 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/sample_body.css">
+    <link rel="stylesheet" href="./css/first_navbar.css">
+
+    <style>
+        /* 共用設定 */
+        .jucc {
+            justify-content: center;
+        }
+
+        .aic {
+            align-items: center;
+        }
+
+        .postrel {
+            position: relative;
+        }
+
+        /* .postabu {
+            position: absolute;
+        } */
+
+        .redcolor {
+            color: #cc543a;
+        }
+
+        .jusbt {
+            justify-content: space-between;
+        }
+
+        .jucsa {
+            justify-content: space-around;
+        }
+
+        .padtop150 {
+            padding-top: 150px;
+        }
+
+        .padbotm80 {
+            padding-bottom: 80px;
+        }
+
+        .padbotm120 {
+            padding-bottom: 120px;
+        }
+
+        .marginleftatuo {
+            margin: 0 0 0 auto;
+        }
+
+        .fontweight {
+            font-weight: bold;
+        }
+
+        /* page_1~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+        .light_Introduction_page_1_set {
+            background-image: url(./img/photo/light.jpg);
+            width: 100%;
+            height: 100vh;
+        }
+
+        .light_Introduction_page_1_set img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .widthheight {
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .colorwhite {
+            color: #fff;
+            letter-spacing: 10px;
+            text-shadow: 2px 3px 5px black;
+        }
+
+        /* page_2~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~*/
+
+        /* ALL-content */
+        .light_light_Introduction_content {
+            display: flex;
+            justify-content: flex-end;
+            padding: 30px 0 0 0;
+            position: relative;
+        }
+
+        .light_Introduction_page_2_img {
+            height: 97%;
+            position: absolute;
+            top: 30px;
+            left: -50px;
+            z-index: 999;
+
+            overflow: hidden;
+
+            opacity: 0.4;
+            
+
+            /* border: 1px solid red; */
+        }
+
+        .light_Introduction_page_2_img img {
+            width: 90%;
+            
+        }
+
+        .light_Introduction_page_2_set{
+            margin: 0 130px 0 0;
+
+            /* border: 1px solid red; */
+        }
+
+        /* title設定 */
+        .light_Introduction_title{
+            font-weight: 700;
+            color: #cc543a;
+            letter-spacing: 0.1rem;
+            padding: 20px 0 70px 0;
+        }
+
+        /* 燈種類別 */
+        .light_Introduction_page_2_light_img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .light_Introduction_page_2_light_img img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .light_Introduction_page_2_light_light_name p{
+            font-size: 22px;
+            padding: 0 0 0 10px;
+        }
+
+
+        /* 燈種資訊區 */
+        .light_Introduction_page_2_text_name_set{
+            justify-content: flex-start;
+            align-items: center;
+            padding: 150px 0;
+            /* border: 1px solid red; */
+        }
+        .light_Introduction_page_2_text_info_set{
+            margin: 0 50px;
+
+            /* border: 1px solid red; */
+        }
+
+        .light_Introduction_page_2_text_img {
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            top: -10px;
+            left: -20px;
+            /* display: none; */
+            /* border: 1px solid red; */
+        }
+
+        .light_Introduction_page_2_text_img img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .lip {
+            /* 字級可自訂 */
+            /* font-size: 20px; */
+            font-size: 16px;
+            font-weight: normal;
+            /* 追加 */
+            margin: 0;
+            letter-spacing: 4px;
+            font-family: 'Faustina', serif;
+            /* 追加修正 */
+            text-align: justify;
+        }
+
+        .maxwidth1080 {
+            max-width: 1080px;
+        }
+
+        .width40 {
+            width: 40%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- page_1~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <div class="light_Introduction_page_1">
+        <!-- page_1 set -->
+        <div class="light_Introduction_page_1_set">
+
+            <!-- page_1 標題 -->
+            <div class="light_Introduction_page_1_title widthheight d-flex jucc aic">
+                <h3 class="colorwhite ">EXPLORE | 探索</h3>
+            </div>
+            <!-- page_1 引導箭頭 -->
+            <div class="light_Introduction_page_1_icon"></div>
+        </div>
+    </div>
+
+
+    <!-- page_2~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <div class="light_Introduction_page_2">
+
+        <!-- navbar在這邊 -->
+        <div class="index_burgurBar">
+            <div class="index_barImg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" viewBox="0 0 25 20">
+                    <g id="Group_135" data-name="Group 135" transform="translate(-341.5 -1313.5)">
+                        <line id="Line_50" data-name="Line 50" x2="23" transform="translate(342.5 1314.5)" fill="none"
+                            stroke="#707070" stroke-linecap="round" stroke-width="2" />
+                        <line id="Line_51" data-name="Line 51" x2="23" transform="translate(342.5 1323.5)" fill="none"
+                            stroke="#707070" stroke-linecap="round" stroke-width="2" />
+                        <line id="Line_52" data-name="Line 52" x2="23" transform="translate(342.5 1332.5)" fill="none"
+                            stroke="#707070" stroke-linecap="round" stroke-width="2" />
+                    </g>
+                </svg>
+            </div>
+        </div>
+
+        <div class="index_overlayNav">
+            <div class="index_closeBtn mb-4">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 20 20">
+                    <title>close</title>
+                    <path fill='#fff' d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"></path>
+                    </svg>
+            </div>
+            <div class="index_overlayNavBox">
+                <ul>
+                    <a href="">
+                        <li>EXPLORE<span>/</span>探索</li>
+                    </a>
+                    <a href="">
+                        <li>TRIP<span>/</span>巡禮</li>
+                    </a>
+                    <a href="">
+                        <li>SERVICE<span>/</span>線上服務</li>
+                    </a>
+                    <a href="">
+                        <li>SHOP<span>/</span>商店</li>
+                    </a>
+                    <a href="">
+                        <li>CART<span>/</span>購物車</li>
+                    </a>
+                    <a href="">
+                        <li>MEMBER<span>/</span>會員中心</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+
+        <div class="index_navbar">
+            <div class="navBox">
+                <ul>
+                    <a href="">
+                        <li class="pr-3">EXPLORE<span>/</span>探索</li>
+                    </a>
+                    <a href="">
+                        <li class="pr-3">TRIP<span>/</span>巡禮</li>
+                    </a>
+                    <a href="">
+                        <li class="pr-3">SERVICE<span>/</span>線上服務</li>
+                    </a>
+                    <a href="">
+                        <li class="pr-3">SHOP<span>/</span>商店</li>
+                    </a>
+                    <a href="">
+                        <li class="pr-3">CART<span>/</span>購物車</li>
+                    </a>
+                    <a href="">
+                        <li>MEMBER<span>/</span>會員中心</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+
+
+        
+    <div class="light_light_Introduction_content">
+
+        <!-- page_2 god_img -->
+        <div class="light_Introduction_page_2_img col-5">
+            <img src="./img/deco/god_Bodhisattva.png">
+        </div>
+
+        <!-- page_2 set -->
+        
+        <div class="light_Introduction_page_2_set col-7 marginleftatuo">
+
+            <!-- page_2 右邊集合 -->
+            <div class="light_Introduction_page_2_rightset maxwidth1080 padbotm120">
+                <!-- page_2 右邊 燈種介紹 -->
+                <div class="light_Introduction_page_2_title col">
+                    <h3 class="light_Introduction_title">Light Introduction | 燈種介紹</h3>
+                </div>
+
+                <!-- page_2 右邊 燈種選擇 集合 -->
+                <div class="light_Introduction_page_2_lightchoose_set d-flex jusbt col padbotm80">
+                    <!-- page_2 右邊 燈圖+燈字 卡 -->
+                    <div class="light_Introduction_page_2_light_card d-flex aic">
+                        <!-- page_2 右邊 燈圖 可用jquery 輪播牆概念替換 點擊!!!! -->
+                        <div class="light_Introduction_page_2_light_img">
+                            <img src="./img/icon/diwali-lamp.svg">
+                        </div>
+                        <!-- page_2 右邊 燈字  光明燈-->
+                        <div class="light_Introduction_page_2_light_light_name">
+                            <p>光明燈</p>
+                        </div>
+                    </div>
+
+                    <div class="light_Introduction_page_2_light_card d-flex aic">
+                        <!-- page_2 右邊  燈圖-->
+                        <div class="light_Introduction_page_2_light_img">
+                            <img src="./img/icon/diwali-lamp.svg">
+                        </div>
+                        <!-- page_2 右邊 燈字  文昌燈-->
+                        <div class="light_Introduction_page_2_light_light_name">
+                            <p>文昌燈</p>
+                        </div>
+                    </div>
+
+                    <div class="light_Introduction_page_2_light_card d-flex aic">
+                        <!-- page_2 右邊 燈圖  -->
+                        <div class="light_Introduction_page_2_light_img">
+                            <img src="./img/icon/diwali-lamp.svg">
+                        </div>
+                        <!-- page_2 右邊 燈字  安太歲-->
+                        <div class="light_Introduction_page_2_light_light_name">
+                            <p>安太歲</p>
+                        </div>
+                    </div>
+
+                    <div class="light_Introduction_page_2_light_card d-flex aic">
+                        <!-- page_2 右邊 燈圖  -->
+                        <div class="light_Introduction_page_2_light_img">
+                            <img src="./img/icon/diwali-lamp.svg">
+                        </div>
+                        <!-- page_2 右邊 燈字 藥師燈 -->
+                        <div class="light_Introduction_page_2_light_light_name">
+                            <p>藥師燈</p>
+                        </div>
+                    </div>
+
+                    <div class="light_Introduction_page_2_light_card d-flex aic">
+                        <!-- page_2 右邊 燈圖  -->
+                        <div class="light_Introduction_page_2_light_img">
+                            <img src="./img/icon/diwali-lamp.svg">
+                        </div>
+                        <!-- page_2 右邊 燈字 發財燈 -->
+                        <div class="light_Introduction_page_2_light_light_name">
+                            <p>發財燈</p>
+                        </div>
+                    </div>
+
+                    <div class="light_Introduction_page_2_light_card d-flex aic">
+                        <!-- page_2 右邊 燈圖  -->
+                        <div class="light_Introduction_page_2_light_img">
+                            <img src="./img/icon/diwali-lamp.svg">
+                        </div>
+                        <!-- page_2 右邊 燈字 平安燈 -->
+                        <div class="light_Introduction_page_2_light_light_name">
+                            <p>平安燈</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                
+
+                <!-- page_2 右邊 燈種功用資訊 -->
+                <div class="light_Introduction_page_2_text_name_set postrel d-flex">
+
+                    <div class="light_Introduction_page_2_text_img">
+                        <img src="./img/deco/red_circleeeeee.svg">
+                    </div>
+                    
+                    <!-- page_2 右邊 _左邊 -->
+                    <div class="light_Introduction_page_2_text_name_left col-lg-6 col-12 d-flex jucc aic">
+
+                        <div class="light_Introduction_page_2_text_info_set">
+                            <div class="light_Introduction_page_2_text_name">
+                                <h4 class="fontweight">光明燈</h4>
+                            </div>
+
+                            <div class="light_Introduction_page_2_text_function">
+                                <p class="redcolor">祈求元辰光彩、補運助氣</p>
+                                <br>
+                                <p>適用對象：
+                                    <br>
+                                    欲求平安順遂、未犯太歲之民眾。
+                                    <br>
+                                    <br>
+                                    登記費用：每盞燈新台幣 600 元整
+                                    <br>
+                                    點燈附贈：香火袋
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- page_2 右邊 _右邊說明 -->
+                    <div class="light_Introduction_page_2_text_name_right col-lg-5 col-12 d-flex jucc aic">
+                        <li class="lip">
+                            燈是元神的象徵，點光明燈即是將姓名、生辰、住址書寫於燈上，拜請神明保佑，以點亮光明來增添元辰光采， 期許為個人補運助氣、增福益壽，避免運途不順、官災、小人等。
+                            光明燈又名消災燈，適用於本命年非犯太歲者；而犯太歲者除了安太歲之外，也可以點光明燈，以祈求身體健康，前程光明。
+                        </li>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+
+    <!-- footer 在這邊~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+    <footer>
+        <p>Copyright© TempleTrip.tw</p>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Js  相關設定~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- jquery3.5.1 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <!-- bootstrap4.6.0 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://unpkg.com/moment-lunar@0.0.4/moment-lunar.min.js"></script>
+    <script>
+
+        const lunarDate = moment().year(2021).month(2).date(24).lunar().format('YYYY-MM-DD');
+        const solarDate = moment().year(2017).month(0).date(1).solar().format('YYYY-MM-DD');
+
+        console.log(lunarDate);
+        console.log(solarDate);
+    </script>
+
+    <!-- js jq 開始 -->
+
+    <script>
+        // overlayNav進場
+        $('.index_barImg').click(function(){
+
+        let navPosition = {
+            transform: 'translateY(0)'
+        }
+
+        $(".index_overlayNav").css(navPosition);
+        })
+
+        // overlayNav退場
+        $('.index_closeBtn').click(function(){
+
+        let navPosition = {
+        transform: 'translateY(-2500px)',
+        transition: '.7s'
+        }
+
+        $(".index_overlayNav").css(navPosition);
+        })
+
+
+    </script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
