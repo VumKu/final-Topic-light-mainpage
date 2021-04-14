@@ -38,10 +38,6 @@
             position: relative;
         }
 
-        /* .postabu {
-            position: absolute;
-        } */
-
         .redcolor {
             color: #cc543a;
         }
@@ -108,33 +104,29 @@
             position: relative;
         }
 
+        /* godImg */
         .light_Introduction_page_2_img {
             height: 97%;
             position: absolute;
             top: 30px;
             left: -50px;
-            z-index: 999;
+            
 
             overflow: hidden;
 
             opacity: 0.4;
-
-
-            /* border: 1px solid red; */
         }
 
         .light_Introduction_page_2_img img {
             width: 90%;
-
         }
 
+        /* lightContent */
         .light_Introduction_page_2_set {
             width: 60%;
             display: flex;
             justify-content: flex-end;
             margin: 0 130px 0 0;
-
-            /* border: 1px solid red; */
         }
 
         /* title設定 */
@@ -145,7 +137,19 @@
             padding: 20px 0 70px 0;
         }
 
+        /* form */
+        .brandsOnMedia{
+            width: 100%;
+            text-align: center;
+
+            display: none;
+        }
+
         /* 燈種類別 */
+        .light_Introduction_page_2_lightchoose_set{
+            display: flex;
+        }
+
         .light_Introduction_page_2_light_img {
             width: 40px;
             height: 40px;
@@ -166,7 +170,7 @@
         .light_Introduction_page_2_text_name_set {
             justify-content: flex-start;
             align-items: center;
-            padding: 100px 0;
+            padding: 80px 0 120px 0;
             /* border: 1px solid red; */
         }
 
@@ -181,7 +185,7 @@
             height: 500px;
             position: absolute;
             top: 13px;
-            left: 20px;
+            left: 10px;
             /* display: none; */
             /* border: 1px solid red; */
         }
@@ -225,10 +229,10 @@
             .light_Introduction_page_2_img {
 
                 position: static;
-                /* top: 30px;
+                /* top: 150px;
                 left: 0; */
 
-                opacity: 0.4;
+                opacity: 0.2;
 
                 /* border: 1px solid red; */
             }
@@ -242,19 +246,21 @@
                 width: 100%;
                 margin: 0;
             }
+            .light_Introduction_page_2_rightset{
+                padding-bottom: 60px;
+            }
+
+            .light_light_Introduction_content{
+                position: relative;
+            }
 
 
             /* title */
-
             .light_Introduction_page_2_title {
                 width: 100%;
                 position: absolute;
                 top: 20px;
                 left: 30px;
-
-
-                /* border: 1px solid red; */
-
             }
 
             .light_Introduction_title {
@@ -262,8 +268,27 @@
                 padding: 0;
                 font-size: 22px;
                 line-height: 30px;
+            }
+
+            /* form */
+            .brandsOnMedia{
+                position: absolute;
+                top: 250px;
+                left: 0;
+                display: block;
+                /* z-index: 2; */
 
                 /* border: 1px solid red; */
+            }
+            .selectStyle{
+            outline-width: 0;
+            border: 0;
+            border-bottom: 1px solid #ccc;
+            padding: 0 0 3px 0;
+            background-color: transparent;
+
+            font-family: 'Faustina', serif;
+            font-size: 20px;
             }
 
 
@@ -272,29 +297,24 @@
                 width: 150px;
                 height: 150px;
                 position: absolute;
-                top: 150px;
+                top: 70px;
                 left: 0;
-
-
-                /* display: none; */
-                /* border: 1px solid red; */
             }
 
             /* light-info-Box */
             .light_Introduction_page_2_text_name_set {
                 padding: 0;
                 flex-direction: column;
-
-                border: 1px solid red;
             }
 
             /* light-info-left */
             .light_Introduction_page_2_text_name_left {
-                margin: 180px 0 0 0;
+                margin: 100px 0 0 0;
             }
 
             /* light-info-right */
             .light_Introduction_page_2_text_name_right {
+                width: 80%;
                 padding-top: 50px;
             }
 
@@ -311,7 +331,7 @@
 </head>
 
 <body>
-    <!-- page_1~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- Banner -->
     <div class="light_Introduction_page_1">
         <!-- page_1 set -->
         <div class="light_Introduction_page_1_set">
@@ -326,10 +346,8 @@
     </div>
 
 
-    <!-- page_2~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-    <div class="light_Introduction_page_2">
-
-        <!-- navbar在這邊 -->
+    
+    <!-- navbar在這邊 -->
         <div class="index_burgurBar">
             <div class="index_barImg">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" viewBox="0 0 25 20">
@@ -404,89 +422,101 @@
         </div>
 
 
-
         <div class="light_light_Introduction_content">
 
-            <!-- page_2 god_img -->
+    <!-- god_img -->
             <div class="light_Introduction_page_2_img col-lg-5 col-12">
                 <img src="./img/deco/god_Bodhisattva.png">
             </div>
 
-            <!-- page_2 set -->
-
             <div class="light_Introduction_page_2_set">
 
-                <!-- page_2 右邊集合 -->
-                <div class="light_Introduction_page_2_rightset padbotm120">
-                    <!-- page_2 右邊 燈種介紹 -->
+                <div class="light_Introduction_page_2_rightset">
+                    
                     <div class="light_Introduction_page_2_title">
                         <h3 class="light_Introduction_title">Light Introduction | 燈種介紹</h3>
                     </div>
 
-                    <!-- page_2 右邊 燈種選擇 集合 -->
+    <!-- Media -->
+            <div class="brandsOnMedia">
+                <form>
+                    <select data-chose="" onchange="this.dataset.chose = this.value;" name="lights" class="selectStyle">
+                        <option selected value="">選擇一盞燈...</option>
+                        <option value="">光明燈</option>
+                        <option value="">文昌燈</option>
+                        <option value="">安太歲</option>
+                        <option>藥師燈</option>
+                        <option>發財燈</option>
+                        <option>平安燈</option>
+                    </select>
+                </form>
+            </div>
+
+
+    <!-- 燈種選擇  -->
                     <div class="light_Introduction_page_2_lightchoose_set jusbt padbotm80">
-                        <!-- page_2 右邊 燈圖+燈字 卡 -->
+                        
                         <div class="light_Introduction_page_2_light_card d-flex aic">
-                            <!-- page_2 右邊 燈圖 可用jquery 輪播牆概念替換 點擊!!!! -->
+                            
                             <div class="light_Introduction_page_2_light_img">
                                 <img src="./img/icon/diwali-lamp.svg">
                             </div>
-                            <!-- page_2 右邊 燈字  光明燈-->
+                            
                             <div class="light_Introduction_page_2_light_light_name">
                                 <p>光明燈</p>
                             </div>
                         </div>
 
                         <div class="light_Introduction_page_2_light_card d-flex aic">
-                            <!-- page_2 右邊  燈圖-->
+                            
                             <div class="light_Introduction_page_2_light_img">
                                 <img src="./img/icon/diwali-lamp.svg">
                             </div>
-                            <!-- page_2 右邊 燈字  文昌燈-->
+                            
                             <div class="light_Introduction_page_2_light_light_name">
                                 <p>文昌燈</p>
                             </div>
                         </div>
 
                         <div class="light_Introduction_page_2_light_card d-flex aic">
-                            <!-- page_2 右邊 燈圖  -->
+                            
                             <div class="light_Introduction_page_2_light_img">
                                 <img src="./img/icon/diwali-lamp.svg">
                             </div>
-                            <!-- page_2 右邊 燈字  安太歲-->
+                            
                             <div class="light_Introduction_page_2_light_light_name">
                                 <p>安太歲</p>
                             </div>
                         </div>
 
                         <div class="light_Introduction_page_2_light_card d-flex aic">
-                            <!-- page_2 右邊 燈圖  -->
+                            
                             <div class="light_Introduction_page_2_light_img">
                                 <img src="./img/icon/diwali-lamp.svg">
                             </div>
-                            <!-- page_2 右邊 燈字 藥師燈 -->
+                            
                             <div class="light_Introduction_page_2_light_light_name">
                                 <p>藥師燈</p>
                             </div>
                         </div>
 
                         <div class="light_Introduction_page_2_light_card d-flex aic">
-                            <!-- page_2 右邊 燈圖  -->
+                            
                             <div class="light_Introduction_page_2_light_img">
                                 <img src="./img/icon/diwali-lamp.svg">
                             </div>
-                            <!-- page_2 右邊 燈字 發財燈 -->
+                            
                             <div class="light_Introduction_page_2_light_light_name">
                                 <p>發財燈</p>
                             </div>
                         </div>
 
                         <div class="light_Introduction_page_2_light_card d-flex aic">
-                            <!-- page_2 右邊 燈圖  -->
+                            
                             <div class="light_Introduction_page_2_light_img">
                                 <img src="./img/icon/diwali-lamp.svg">
                             </div>
-                            <!-- page_2 右邊 燈字 平安燈 -->
+                            
                             <div class="light_Introduction_page_2_light_light_name">
                                 <p>平安燈</p>
                             </div>
@@ -497,14 +527,14 @@
 
 
 
-                    <!-- page_2 右邊 燈種功用資訊 -->
+    <!-- 燈種資訊 -->
                     <div class="light_Introduction_page_2_text_name_set postrel d-flex">
 
                         <div class="light_Introduction_page_2_text_img">
                             <img src="./img/deco/red_circleeeeee.svg">
                         </div>
 
-                        <!-- page_2 右邊 _左邊 -->
+                    
                         <div class="light_Introduction_page_2_text_name_left col-lg-6 col-12 d-flex jucc aic">
 
                             <div class="light_Introduction_page_2_text_info_set">
@@ -529,7 +559,7 @@
                         </div>
 
 
-                        <!-- page_2 右邊 _右邊說明 -->
+    <!-- 燈種詳細介紹 -->
                         <div class="light_Introduction_page_2_text_name_right col-lg-5 col-12 d-flex jucc aic">
                             <p class="lip">
                                 在中國民間信仰上，在春節正月期間，為自己點光明燈，有「照耀前途」的意義。此外，廟方通常不接受以死者名義點光明燈。有些廟宇安太歲的方式，是在太歲神旁點上寫有犯太歲者姓名的光明燈。以往光明燈使用蠟燭或油燈的方式，其大量燃煙與不一定能長久光明的缺點，造成許多困擾，近代的廟宇因此設計有現代的塔型光明電燈，在台灣許多廟宇，皆可看到塔型的光明燈座，是每一層中有小隔間，內用紅色的小燈泡，外則在透明小窗上貼上或是寫上施主的姓名、生日（經常以紅色筆寫成）。
@@ -546,7 +576,7 @@
 
         </div>
 
-    </div>
+    
 
 
     <!-- footer 在這邊~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
