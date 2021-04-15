@@ -17,9 +17,11 @@
     <script src="https://kit.fontawesome.com/271f30e909.js" crossorigin="anonymous"></script>
     <!-- 文字 -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap"
+            rel="stylesheet">
 
     <link rel="stylesheet" href="./css/sample_body.css">
     <link rel="stylesheet" href="./css/first_navbar.css">
@@ -79,7 +81,6 @@
 
         .light_Introduction_page_1_set img {
             width: 100%;
-            height: 100%;
         }
 
         .widthheight {
@@ -89,6 +90,7 @@
         }
 
         .colorwhite {
+            font-family: 'Noto Serif TC', serif;
             color: #fff;
             letter-spacing: 10px;
             text-shadow: 2px 3px 5px black;
@@ -170,7 +172,7 @@
         .light_Introduction_page_2_text_name_set {
             justify-content: flex-start;
             align-items: center;
-            padding: 80px 0 120px 0;
+            padding: 50px 0 80px 0;
             /* border: 1px solid red; */
         }
 
@@ -180,11 +182,12 @@
             /* border: 1px solid red; */
         }
 
+        /* red-circle */
         .light_Introduction_page_2_text_img {
             width: 500px;
             height: 500px;
             position: absolute;
-            top: 13px;
+            top: -10px;
             left: 10px;
             /* display: none; */
             /* border: 1px solid red; */
@@ -194,6 +197,26 @@
             width: 100%;
             height: 100%;
         }
+
+        /* button */
+        .light_Introduction_btn{
+            width: 90%;
+            text-align: right;
+            margin: 0 0 50px 0;
+            position: relative;
+            left: 0;
+            transition: .5s;
+            /* border: 1px solid red; */
+        }
+        #clickToLight{
+            font-family: 'Noto Serif TC', serif;
+            letter-spacing: 0.2rem;
+        }
+        .light_Introduction_btn:hover{
+            left: 20px;
+            transition: .5s;
+        }
+        
 
         .lip {
             /* 字級可自訂 */
@@ -217,6 +240,10 @@
         }
 
         @media (max-width: 770px) {
+            /* banner-word */
+            .colorwhite {
+                font-size: 20px;
+            }
 
             /* 神像圖 */
             .light_light_Introduction_content {
@@ -257,7 +284,6 @@
 
             /* title */
             .light_Introduction_page_2_title {
-                width: 100%;
                 position: absolute;
                 top: 20px;
                 left: 30px;
@@ -281,14 +307,14 @@
                 /* border: 1px solid red; */
             }
             .selectStyle{
-            outline-width: 0;
-            border: 0;
-            border-bottom: 1px solid #ccc;
-            padding: 0 0 3px 0;
-            background-color: transparent;
+                outline-width: 0;
+                border: 0;
+                border-bottom: 1px solid #ccc;
+                padding: 0 0 3px 0;
+                background-color: transparent;
 
-            font-family: 'Faustina', serif;
-            font-size: 20px;
+                font-family: 'Faustina', serif;
+                font-size: 20px;
             }
 
 
@@ -325,7 +351,13 @@
                 display: none;
             }
 
-
+            /* button */
+            .light_Introduction_btn{
+                width: 100%;
+                text-align: center;
+                margin: 40px 0 0 0;
+            }
+            
         }
     </style>
 </head>
@@ -338,7 +370,7 @@
 
             <!-- page_1 標題 -->
             <div class="light_Introduction_page_1_title widthheight d-flex jucc aic">
-                <h3 class="colorwhite ">EXPLORE | 探索</h3>
+                <h3 class="colorwhite ">LIGHT | 祈福點燈</h3>
             </div>
             <!-- page_1 引導箭頭 -->
             <div class="light_Introduction_page_1_icon"></div>
@@ -569,9 +601,15 @@
                         </div>
                     </div>
 
+                    <div class="light_Introduction_btn">
+                        <button id="clickToLight">我想點燈</button>
+                    </div>
 
                 </div>
             </div>
+
+            
+        
 
 
         </div>

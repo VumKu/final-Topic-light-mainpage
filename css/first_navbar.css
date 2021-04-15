@@ -1,6 +1,14 @@
  /* burgurBar */
+ .index_burgurBar{
+     padding: 1px 0;
+    position: sticky;
+    top: 0px;
+    z-index: 99;
+    background-image: url(../img/deco/navbar-bcc.jpg);
+    display: none;
+}
  .index_barImg {
-    margin: 30px;
+    margin: 20px;
     display: none;
 }
 
@@ -87,6 +95,9 @@
 @media (max-width: 770px) {
 
     /* nav */
+    .index_burgurBar{
+        display:  block;
+    }
     .index_barImg {
         display: block;
     }
