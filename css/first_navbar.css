@@ -46,7 +46,7 @@
 .index_navbar {
     width: 100%;
     background-image: url(../img/deco/navbar-bcc.jpg);
-    padding: 50px 0;
+    padding: 40px 0;
     position: sticky;
     top: 0px;
     z-index: 99;
