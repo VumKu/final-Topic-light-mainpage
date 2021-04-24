@@ -102,14 +102,42 @@
             z-index: 2;
             left: 50%;
             top: 90%;
-
-            animation: downArrow 1.5s linear infinite;
         }
 
-        @keyframes downArrow{
-            to{
-                top: 94%;
-            }
+        .arrows {
+            width: 60px;
+            height: 72px;
+        }
+
+        .arrows path {
+            stroke: #fff;
+            fill: transparent;
+            stroke-width: 1px;	
+            animation: arrow 2s infinite;
+            -webkit-animation: arrow 2s infinite; 
+        }
+
+        @keyframes arrow
+        {
+            0% {opacity:0}
+            40% {opacity:1}
+            80% {opacity:0}
+            100% {opacity:0}
+        }
+
+        .arrows path.a1 {
+            animation-delay:-1s;
+            -webkit-animation-delay:-1s; /* Safari 和 Chrome */
+        }
+
+        .arrows path.a2 {
+            animation-delay:-0.5s;
+            -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+        }
+
+        .arrows path.a3 {	
+            animation-delay:0s;
+            -webkit-animation-delay:0s; /* Safari 和 Chrome */
         }
 
         /* page_2~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~*/
@@ -170,12 +198,13 @@
 
         .light_Introduction_page_2_light_img {
             width: 40px;
-            height: 40px;
+        }
+        .imgBoxBig{
+            width: 50px;
         }
 
         .light_Introduction_page_2_light_img img {
             width: 100%;
-            height: 100%;
         }
 
         .light_Introduction_page_2_light_light_name p {
@@ -394,17 +423,10 @@
             </div>
             <!-- page_1 引導箭頭 -->
             <div class="index_slideDown">
-                <svg xmlns="http://www.w3.org/2000/svg" width="36.987" height="36.184" viewBox="0 0 36.987 36.184">
-                    <g id="arrow" transform="translate(-922.797 -973.297)">
-                      <g id="arrow-2" data-name="arrow" transform="translate(924.211 990.986)">
-                        <line id="Line_6" data-name="Line 6" x2="24.154" transform="translate(0 0) rotate(45)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
-                        <line id="Line_7" data-name="Line 7" x2="24.154" transform="translate(34.159 0) rotate(135)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
-                      </g>
-                      <g id="arrow-3" data-name="arrow" transform="translate(924.211 974.711)" opacity="0.6">
-                        <line id="Line_6-2" data-name="Line 6" x2="24.154" transform="translate(0 0) rotate(45)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
-                        <line id="Line_7-2" data-name="Line 7" x2="24.154" transform="translate(34.159 0) rotate(135)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
-                      </g>
-                    </g>
+                <svg class="arrows">
+                    <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                    <path class="a2" d="M0 20 L30 52 L60 20"></path>
+                    <path class="a3" d="M0 40 L30 72 L60 40"></path>
                 </svg>
             </div>
         </div>
@@ -491,7 +513,7 @@
 
     <!-- god_img -->
             <div class="light_Introduction_page_2_img col-lg-5 col-12">
-                <img src="./img/deco/god_Bodhisattva.png">
+                <img class="light_godImg" src="./img/deco/god_Bodhisattva.png">
             </div>
 
             <div class="light_Introduction_page_2_set">
@@ -576,7 +598,7 @@
                             </div>
                         </div>
 
-                        <div id="light_P-light" class="light_Introduction_page_2_light_card d-flex aic">
+                        <div id="light_YU-light" class="light_Introduction_page_2_light_card d-flex aic">
                             
                             <div class="light_Introduction_page_2_light_img">
                                 <img src="./img/icon/diwali-lamp.svg" alt="">
@@ -721,11 +743,14 @@
 
         //換頁換燈
         $('#light_G-light').find('img').attr('src','./img/icon/lamp-lighting.svg');
+        $('#light_G-light').find('.light_Introduction_page_2_light_img').addClass('imgBoxBig');
 
         $('.light_Introduction_page_2_light_card').click(function(){
 
             $(this).find('img').attr('src','./img/icon/lamp-lighting.svg');
+            $(this).find('.light_Introduction_page_2_light_img').addClass('imgBoxBig');
             $(this).siblings().find('img').attr('src','./img/icon/diwali-lamp.svg');
+            $(this).siblings().find('.light_Introduction_page_2_light_img').removeClass('imgBoxBig');
         })
         
         
@@ -737,11 +762,14 @@
         $('#light_G-light').click(function(){
 
             $('.light_Introduction_page_2_text_name_set').css({'opacity':'0', 'transition':'0'});
+            $('.light_godImg').css({'opacity':'0', 'transition':'0'});
 
         setTimeout(() => {
 
             $('.light_Introduction_page_2_text_name_set').css({'opacity':'1', 'transition':'1s'});
+            $('.light_godImg').css({'opacity':'1', 'transition':'1s'});
 
+            $('.light_godImg').attr('src', './img/deco/god_Bodhisattva.png');
             $('.light_lightName').text('光明燈');
             $('.light_eff').text('祈求元辰光彩、補運助氣');
             $('.light_who').text('欲求平安順遂、未犯太歲之民眾。');
@@ -758,11 +786,14 @@
         $('#light_W-light').click(function(){
 
             $('.light_Introduction_page_2_text_name_set').css({'opacity':'0', 'transition':'0'});
+            $('.light_godImg').css({'opacity':'0', 'transition':'0'});
 
             setTimeout(() => {
 
                 $('.light_Introduction_page_2_text_name_set').css({'opacity':'1', 'transition':'1s'});
+                $('.light_godImg').css({'opacity':'1', 'transition':'1s'});
 
+                $('.light_godImg').attr('src', './img/deco/god_W.png')
                 $('.light_lightName').text('文昌燈');
                 $('.light_eff').text('祈求金榜題名、工作升遷');
                 $('.light_who').text('學生、領薪水之上班族。');
@@ -779,11 +810,14 @@
         $('#light_A-light').click(function(){
 
         $('.light_Introduction_page_2_text_name_set').css({'opacity':'0', 'transition':'0'});
+        $('.light_godImg').css({'opacity':'0', 'transition':'0'});
 
         setTimeout(() => {
 
             $('.light_Introduction_page_2_text_name_set').css({'opacity':'1', 'transition':'1s'});
+            $('.light_godImg').css({'opacity':'1', 'transition':'1s'});
 
+            $('.light_godImg').attr('src', './img/deco/god_A.png');
             $('.light_lightName').text('安太歲');
             $('.light_eff').text('祈求流年平安、諸事順遂');
             $('.light_who').text('該生肖之犯太歲民眾。');
@@ -798,11 +832,14 @@
         $('#light_Y-light').click(function(){
 
         $('.light_Introduction_page_2_text_name_set').css({'opacity':'0', 'transition':'0'});
+        $('.light_godImg').css({'opacity':'0', 'transition':'0'});
 
         setTimeout(() => {
 
             $('.light_Introduction_page_2_text_name_set').css({'opacity':'1', 'transition':'1s'});
+            $('.light_godImg').css({'opacity':'1', 'transition':'1s'});
 
+            $('.light_godImg').attr('src', './img/deco/god_Y.png');
             $('.light_lightName').text('藥師燈');
             $('.light_eff').text('祈求身體健康平安');
             $('.light_who').text('祈求健康長壽、身心安樂之民眾。');
@@ -817,11 +854,14 @@
         $('#light_F-light').click(function(){
 
         $('.light_Introduction_page_2_text_name_set').css({'opacity':'0', 'transition':'0'});
+        $('.light_godImg').css({'opacity':'0', 'transition':'0'});
 
         setTimeout(() => {
 
             $('.light_Introduction_page_2_text_name_set').css({'opacity':'1', 'transition':'1s'});
+            $('.light_godImg').css({'opacity':'1', 'transition':'1s'});
 
+            $('.light_godImg').attr('src', './img/deco/god_F.png');
             $('.light_lightName').text('發財燈');
             $('.light_eff').text('祈求趨吉避凶、投資倍利');
             $('.light_who').text('欲消災解厄之民眾、創業投資者。');
@@ -833,14 +873,17 @@
         })
 
         //選燈換頁 (姻緣燈)
-        $('#light_P-light').click(function(){
+        $('#light_YU-light').click(function(){
 
         $('.light_Introduction_page_2_text_name_set').css({'opacity':'0', 'transition':'0'});
+        $('.light_godImg').css({'opacity':'0', 'transition':'0'});
 
         setTimeout(() => {
 
             $('.light_Introduction_page_2_text_name_set').css({'opacity':'1', 'transition':'1s'});
+            $('.light_godImg').css({'opacity':'1', 'transition':'1s'});
 
+            $('.light_godImg').attr('src', './img/deco/god_YU.png');
             $('.light_lightName').text('姻緣燈');
             $('.light_eff').text('祈求姻緣順利、婚姻美滿');
             $('.light_who').text('未婚或已婚男女，祈求姻緣順利者。');
