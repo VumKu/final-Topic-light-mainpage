@@ -161,6 +161,8 @@
             overflow: hidden;
 
             opacity: 0.4;
+
+            /* border: 1px solid red; */
         }
 
         .light_Introduction_page_2_img img {
@@ -288,6 +290,24 @@
             width: 40%;
         }
 
+         /* goTop */
+         .index_goTopImg {
+            width: 50px;
+            position: fixed;
+            bottom: -100px;
+            right: 20px;
+            transition: .5s;
+            z-index: 9;
+        }
+
+        .index_goTopImg svg {
+            width: 100%;
+        }
+
+        .index_goTopImg.show {
+            bottom: 20px;
+        }
+
         @media (max-width: 770px) {
             /* banner-word */
             .colorwhite {
@@ -300,13 +320,14 @@
                 flex-direction: column;
                 align-items: center;
                 position: relative;
+
+                /* border: 1px solid red; */
             }
 
             .light_Introduction_page_2_img {
-
-                position: static;
-                /* top: 150px;
-                left: 0; */
+                height: 40%;
+                top: 800px;
+                left: 0px;
 
                 opacity: 0.2;
 
@@ -345,34 +366,13 @@
                 line-height: 30px;
             }
 
-            /* form */
-            .brandsOnMedia{
-                position: absolute;
-                top: 250px;
-                left: 0;
-                display: block;
-                /* z-index: 2; */
-
-                /* border: 1px solid red; */
-            }
-            .selectStyle{
-                outline-width: 0;
-                border: 0;
-                border-bottom: 1px solid #ccc;
-                padding: 0 0 3px 0;
-                background-color: transparent;
-
-                font-family: 'Faustina', serif;
-                font-size: 20px;
-            }
-
 
             /* red-circle */
             .light_Introduction_page_2_text_img {
                 width: 150px;
                 height: 150px;
                 position: absolute;
-                top: 70px;
+                top: 30px;
                 left: 0;
             }
 
@@ -384,7 +384,7 @@
 
             /* light-info-left */
             .light_Introduction_page_2_text_name_left {
-                margin: 100px 0 0 0;
+                margin: 80px 0 0 0;
             }
 
             /* light-info-right */
@@ -397,8 +397,20 @@
 
             /* 燈種選擇 */
             .light_Introduction_page_2_lightchoose_set {
-                display: none;
+                /* display: none; */
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                margin: 80px 0 0 0;
+                padding: 0;
+
+                /* border: 1px solid red; */
             }
+            .light_Introduction_page_2_light_card{
+                margin: 15px 10px;
+            }
+            .light_Introduction_page_2_light_light_name p {
+            font-size: 16px;
+        }
 
             /* button */
             .light_Introduction_btn{
@@ -524,21 +536,6 @@
                         <h3 class="light_Introduction_title">Light Introduction | 燈種介紹</h3>
                     </div>
 
-    <!-- Media -->
-            <div class="brandsOnMedia">
-                <form>
-                    <select data-chose="" onchange="this.dataset.chose = this.value;" name="lights" class="selectStyle">
-                        <option selected value="">選擇一盞燈...</option>
-                        <option value="">光明燈</option>
-                        <option value="">文昌燈</option>
-                        <option value="">安太歲</option>
-                        <option>藥師燈</option>
-                        <option>發財燈</option>
-                        <option>平安燈</option>
-                    </select>
-                </form>
-            </div>
-
 
     <!-- 燈種選擇  -->
                     <div class="light_Introduction_page_2_lightchoose_set jusbt padbotm80">
@@ -662,14 +659,33 @@
 
                 </div>
             </div>
-
-            
-        
-
-
         </div>
 
-    
+
+    <!-- go-Top -->
+    <div class="index_goTop d-flex justify-content-end">
+        <div class="index_goTopImg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+                <g id="Group_81" data-name="Group 81" transform="translate(-1810 -2767)">
+                    <g id="Ellipse_2" data-name="Ellipse 2" transform="translate(1810 2767)" fill="#fff"
+                        stroke="#535353" stroke-width="1" opacity="0.8">
+                        <circle cx="40" cy="40" r="40" stroke="none" />
+                        <circle cx="40" cy="40" r="39.5" fill="none" />
+                    </g>
+                    <g id="Group_30" data-name="Group 30" transform="translate(-1630.25 4496) rotate(-90)">
+                        <path id="Path_3" data-name="Path 3" d="M0,0H35" transform="translate(1671.5 3480.25)"
+                            fill="none" stroke="#2d2a2a" stroke-linecap="round" stroke-width="2" />
+                        <line id="Line_39" data-name="Line 39" x1="9.333" y1="8.75"
+                            transform="translate(1697.167 3471.5)" fill="none" stroke="#2d2a2a" stroke-linecap="round"
+                            stroke-width="2" />
+                        <line id="Line_40" data-name="Line 40" x1="9.333" y2="8.75"
+                            transform="translate(1697.167 3480.25)" fill="none" stroke="#2d2a2a" stroke-linecap="round"
+                            stroke-width="2" />
+                    </g>
+                </g>
+            </svg>
+        </div>
+    </div>
 
 
     <!-- footer 在這邊~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -696,26 +712,10 @@
 
 
     <!-- Js  相關設定~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-    <!-- jquery3.5.1 -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <!-- bootstrap4.6.0 -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-        crossorigin="anonymous"></script>
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="https://unpkg.com/moment-lunar@0.0.4/moment-lunar.min.js"></script>
-    <script>
-
-        const lunarDate = moment().year(2021).month(2).date(24).lunar().format('YYYY-MM-DD');
-        const solarDate = moment().year(2017).month(0).date(1).solar().format('YYYY-MM-DD');
-
-        console.log(lunarDate);
-        console.log(solarDate);
-    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
     <!-- js jq 開始 -->
 
@@ -870,7 +870,7 @@
             
         }, 500);
 
-        })
+        });
 
         //選燈換頁 (姻緣燈)
         $('#light_YU-light').click(function(){
@@ -892,7 +892,26 @@
             
         }, 500);
 
-        })
+        });
+
+    // Go-Top
+        $(window).scroll(function (event) {
+                let scrollTop = $(window).scrollTop();
+                console.log(scrollTop);
+
+                if (scrollTop >= 1000) {
+
+                    $(".index_goTopImg").addClass('show');
+                } else {
+                    $(".index_goTopImg").removeClass('show');
+                }
+            });
+
+            $('.index_goTopImg').click(function () {
+                $("html,body").animate({
+                    scrollTop: 0,
+                }, 700);
+            });
 
 
     </script>
