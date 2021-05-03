@@ -846,6 +846,29 @@
     <!-- js jq 開始 -->
 
     <script>
+
+         //click slidedown
+         $('.index_slideDown').click(function(){
+            
+            let windowWidth = $(window).width();
+
+            if ( windowWidth > 1400){
+                
+                $("html,body").animate({
+                    scrollTop: 980,
+                }, 1000);
+            };
+            if ( windowWidth < 400){
+                
+                $("html,body").animate({
+                    scrollTop: 818,
+                }, 1000);
+            };
+
+
+        });
+
+    
         //Login hide
         $('#registerbtn').click(function () {
             $('#loginCenter').modal('hide');
