@@ -104,41 +104,16 @@
     text-decoration: none;
 }
 
-.nav_news::before{
-    content: "最新消息";
+.nav_hide_en {
+    display: none;
 }
-.nav_news:hover::before{
-    content: "NEWS";
+
+.nav_navbar_item:hover .nav_hide_ch {
+    display: none;
 }
-.nav_explore::before{
-    content: "探索灣廟";
-}
-.nav_explore:hover::before{
-    content: "EXPLORE";
-}
-.nav_serv::before{
-    content: "線上服務";
-}
-.nav_serv:hover::before{
-    content: "SERVICE";
-}
-.nav_trip::before{
-    content: "聖地巡禮";
-}
-.nav_trip:hover::before{
-    content: "TRIP";
-}
-.nav_shop::before{
-    content: "祈福商店";
-}
-.nav_shop:hover::before{
-    content: "SHOP";
-}
-.nav_cart::before{
-    content: "購物車";
-}
-.nav_cart:hover::before{
-    content: "CART";
+
+.nav_navbar_item:hover .nav_hide_en {
+    display: block;
 }
 
 
